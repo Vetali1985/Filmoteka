@@ -1,0 +1,39 @@
+.container {
+  margin: auto;
+  width: $mobile;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+.container__main--content {
+  min-height: 50vh;
+  @media screen and (min-width: $mobile) {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 50px;
+    padding-top: 60px;
+  }
+}
+
+.container__main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    gap: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    row-gap: 32px;
+    column-gap: 16px;
+  }
+}

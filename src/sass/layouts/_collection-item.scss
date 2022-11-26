@@ -1,0 +1,141 @@
+.card__item {
+  position: relative;
+  border-radius: 5px;
+  list-style-type: none;
+  height: 440px;
+  opacity: 1;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+    transform: scale(1.025);
+    .card__title,
+    .card__description {
+      text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    }
+    .card__rating {
+      box-shadow: #ff6b08 2px 2px 10px;
+    }
+  }
+}
+
+.card__link {
+  text-decoration: none;
+  color: black;
+}
+
+.card__poster {
+  display: block;
+  height: 398px;
+}
+
+.card__poster {
+  border-radius: 6px;
+}
+
+.card__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__title {
+  text-transform: uppercase;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: start;
+}
+
+.card__description {
+  display: inline;
+  text-align: start;
+
+  font-size: 12px;
+  line-height: 1.33;
+  color: #ff6b08;
+}
+
+.card__rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+  color: #eeeeee;
+  background-color: #ff6b08;
+  width: 50px;
+  height: 25px;
+  font-size: 22px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+// ************************** MOB *******************
+
+@media screen and (max-width: 767px) {
+  .card__item {
+    width: 280px;
+  }
+
+  .card__poster {
+    width: 280px;
+  }
+}
+
+// ************************ TABLET ***************************
+
+@media screen and (min-width: $tablet) {
+  .card__item {
+    width: 336px;
+    height: 494px;
+  }
+
+  .card__poster {
+    width: 336px;
+    height: 455px;
+  }
+
+  .card__rating {
+    width: 60px;
+    height: 30px;
+    font-size: 26px;
+    line-height: 1.17;
+  }
+}
+
+// *********************** DESKTOP ********************
+
+@media screen and (min-width: $desktop) {
+  .card__item {
+    width: 395px;
+    height: 634px;
+  }
+
+  .card__poster {
+    width: 395px;
+    height: 574px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+
+  .card__description {
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+
+  .card__rating {
+    width: 70px;
+    height: 35px;
+    font-size: 32px;
+    line-height: 1.17;
+  }
+}
